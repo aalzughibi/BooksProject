@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Add Book{% endblock %}
+{% block body %}
+<div class="container">
+    <h1>Add Book</h1>
+
+    {% if messages %}
+    <div class="msgs">
+        {% for i in messages %}
+        <p>{{i}}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Add Book" class="btn">
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block body %}
+{% for i in data%}
+<div class="box">
+    <p><img src="{{i.picture.url}}" alt="image cover" width="100px" height="100px"></p>
+<p>Name:{{i.name}}</p>
+<p>Auhor:{{i.author}}</p>
+<p>ISBN:{{i.isbn}}</p>
+<p>Publish on:{{i.publish_on|date:"D d M Y"}}</p>
+<p><a href="{% url 'details' i.id%}">More details</a></p>
+</div>
+
+{% endfor %}
+{% endblock %}

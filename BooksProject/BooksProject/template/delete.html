@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Delete Book{% endblock %}
+{% block body %}
+<div class="box">
+        <p><img src="{{data.picture.url}}" alt="image cover" width="100px" height="100px"></p>
+    <p>Name:{{data.name}}</p>
+    <p>Auhor:{{data.author}}</p>
+    <p>ISBN:{{data.isbn}}</p>
+    <p>Publish on:{{data.publish_on|date:"D d M Y"}}</p>
+    <p>About: {{data.about}}</p>
+<p><a href="">Update Book</a> <a href="">Delete Book</a></p>
+    </div>
+{% endblock %}
